@@ -31548,6 +31548,9 @@ ol {
   /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
   font-display: swap;
 }
+html {
+  direction: initial;
+}
 html.rtl {
   direction: rtl;
 }
