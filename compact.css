@@ -17635,7 +17635,7 @@ textarea.ant-pagination-options-quick-jumper input {
   margin-bottom: 4px;
   text-align: right;
 }
-.ant-popover-buttons button {
+.ant-popover-buttons button:not(:first-child) {
   margin-left: 8px;
 }
 .ant-popover-arrow {
@@ -34501,6 +34501,7 @@ ul.anticons-list li.copied::after {
   color: #697b8c;
 }
 #resources-page .resource-cards .resource-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -34521,6 +34522,18 @@ ul.anticons-list li.copied::after {
   margin: -1px -1px 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#resources-page .resource-cards .resource-card .resource-card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 1px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
 }
 #resources-page .resource-cards .resource-card .resource-card-title {
   margin: 16px 20px 8px;
@@ -34607,6 +34620,7 @@ ul.anticons-list li.copied::after {
   color: #697b8c;
 }
 #resources-page .resource-cards .resource-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -34627,6 +34641,18 @@ ul.anticons-list li.copied::after {
   margin: -1px -1px 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+#resources-page .resource-cards .resource-card .resource-card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 1px;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
 }
 #resources-page .resource-cards .resource-card .resource-card-title {
   margin: 16px 20px 8px;
