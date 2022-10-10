@@ -13564,6 +13564,7 @@ textarea.ant-input-affix-wrapper {
 }
 .ant-input-affix-wrapper > input.ant-input {
   padding: 0;
+  font-size: inherit;
   border: none;
   outline: none;
 }
@@ -14269,11 +14270,11 @@ textarea.ant-input {
 .ant-input-search-rtl > .ant-input-group > .ant-input-affix-wrapper-focused {
   border-right-color: #40a9ff;
 }
-.ant-input-search-rtl > .ant-input-group > .ant-input-group-addon {
+.ant-input-search-rtl > .ant-input-group > .ant-input-group-addon:last-child {
   right: -1px;
   left: auto;
 }
-.ant-input-search-rtl > .ant-input-group > .ant-input-group-addon .ant-input-search-button {
+.ant-input-search-rtl > .ant-input-group > .ant-input-group-addon:last-child .ant-input-search-button {
   border-radius: 2px 0 0 2px;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
