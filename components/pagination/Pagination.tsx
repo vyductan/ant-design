@@ -5,6 +5,7 @@ import RightOutlined from '@ant-design/icons/RightOutlined';
 import classNames from 'classnames';
 import type { PaginationProps as RcPaginationProps } from 'rc-pagination';
 import RcPagination, { PaginationLocale } from 'rc-pagination';
+  //@ts-ignore
 import enUS from 'rc-pagination/lib/locale/en_US';
 import * as React from 'react';
 import { ConfigContext } from '../config-provider';
@@ -26,7 +27,7 @@ export interface PaginationConfig extends PaginationProps {
   position?: PaginationPosition;
 }
 
-export { PaginationLocale };
+export type { PaginationLocale };
 
 const Pagination: React.FC<PaginationProps> = ({
   prefixCls: customizePrefixCls,

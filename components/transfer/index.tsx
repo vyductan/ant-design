@@ -16,9 +16,9 @@ import type { TransferListBodyProps } from './ListBody';
 import Operation from './operation';
 import Search from './search';
 
-export { TransferListProps } from './list';
-export { TransferOperationProps } from './operation';
-export { TransferSearchProps } from './search';
+export type { TransferListProps } from './list';
+export type { TransferOperationProps } from './operation';
+export type { TransferSearchProps } from './search';
 
 export type TransferDirection = 'left' | 'right';
 
@@ -328,6 +328,7 @@ class Transfer<RecordType extends TransferItem = TransferItem> extends React.Com
 
     const leftDataSource: KeyWise<RecordType>[] = [];
     const rightDataSource: KeyWise<RecordType>[] = new Array(targetKeys.length);
+//@ts-ignore
     dataSource.forEach((record: KeyWise<RecordType>) => {
       if (rowKey) {
         record = {
@@ -417,7 +418,9 @@ class Transfer<RecordType extends TransferItem = TransferItem> extends React.Com
                         onItemSelectAll={this.onLeftItemSelectAll}
                         render={render}
                         showSearch={showSearch}
+//@ts-ignore
                         renderList={children}
+//@ts-ignore
                         footer={footer}
                         onScroll={this.handleLeftScroll}
                         disabled={disabled}
@@ -454,7 +457,9 @@ class Transfer<RecordType extends TransferItem = TransferItem> extends React.Com
                         onItemRemove={this.onRightItemRemove}
                         render={render}
                         showSearch={showSearch}
+//@ts-ignore
                         renderList={children}
+//@ts-ignore
                         footer={footer}
                         onScroll={this.handleRightScroll}
                         disabled={disabled}

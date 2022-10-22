@@ -1,3 +1,4 @@
+    // @ts-ignore
 import padStart from 'lodash/padStart';
 import type * as React from 'react';
 

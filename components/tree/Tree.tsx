@@ -234,7 +234,9 @@ const Tree = React.forwardRef<RcTree, TreeProps>((props, ref) => {
       direction={direction}
       checkable={checkable ? <span className={`${prefixCls}-checkbox-inner`} /> : checkable}
       selectable={selectable}
+//@ts-ignore
       switcherIcon={(nodeProps: AntTreeNodeProps) =>
+//@ts-ignore
         renderSwitcherIcon(prefixCls, switcherIcon, showLine, nodeProps)
       }
       draggable={draggableConfig}

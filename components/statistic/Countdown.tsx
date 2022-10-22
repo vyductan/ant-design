@@ -63,6 +63,7 @@ const Countdown: React.FC<CountdownProps> = props => {
   const valueRender = (node: React.ReactElement<HTMLDivElement>) =>
     cloneElement(node, { title: undefined });
 
+    // @ts-ignore
   return <Statistic {...props} valueRender={valueRender} formatter={formatter} />;
 };
 

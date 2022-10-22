@@ -1,33 +1,37 @@
-import IconContext from '@ant-design/icons/lib/components/Context';
-import { FormProvider as RcFormProvider } from 'rc-field-form';
-import type { ValidateMessages } from 'rc-field-form/lib/interface';
-import useMemo from 'rc-util/lib/hooks/useMemo';
 import * as React from 'react';
-import type { RequiredMark } from '../form/Form';
-import type { Locale } from '../locale-provider';
-import LocaleProvider, { ANT_MARK } from '../locale-provider';
-import LocaleReceiver from '../locale-provider/LocaleReceiver';
-import defaultLocale from '../locale/default';
-import message from '../message';
-import notification from '../notification';
-import type { Theme } from './context';
+
 import {
+  CSPConfig,
   ConfigConsumer,
   ConfigConsumerProps,
   ConfigContext,
-  CSPConfig,
   DirectionType,
 } from './context';
-import { registerTheme } from './cssVariables';
-import { RenderEmptyHandler } from './defaultRenderEmpty';
-import { DisabledContextProvider } from './DisabledContext';
-import type { SizeType } from './SizeContext';
+import LocaleProvider, { ANT_MARK } from '../locale-provider';
 import SizeContext, { SizeContextProvider } from './SizeContext';
 
+import { DisabledContextProvider } from './DisabledContext';
+import IconContext from '@ant-design/icons/lib/components/Context';
+import type { Locale } from '../locale-provider';
+import LocaleReceiver from '../locale-provider/LocaleReceiver';
+import { FormProvider as RcFormProvider } from 'rc-field-form';
+import { RenderEmptyHandler } from './defaultRenderEmpty';
+import type { RequiredMark } from '../form/Form';
+import type { SizeType } from './SizeContext';
+import type { Theme } from './context';
+import type { ValidateMessages } from 'rc-field-form/lib/interface';
+import defaultLocale from '../locale/default';
+import message from '../message';
+import notification from '../notification';
+import { registerTheme } from './cssVariables';
+import useMemo from 'rc-util/lib/hooks/useMemo';
+
 export {
-  RenderEmptyHandler,
   ConfigContext,
   ConfigConsumer,
+}
+export type {
+  RenderEmptyHandler,
   CSPConfig,
   DirectionType,
   ConfigConsumerProps,
@@ -262,7 +266,7 @@ const ProviderChildren: React.FC<ProviderChildrenProps> = props => {
       <DisabledContextProvider disabled={componentDisabled}>{childNode}</DisabledContextProvider>
     );
   }
-
+ //@ts-ignore
   return <ConfigContext.Provider value={memoedConfig}>{childNode}</ConfigContext.Provider>;
 };
 

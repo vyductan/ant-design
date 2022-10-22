@@ -1,25 +1,27 @@
+import * as React from 'react';
+
+import type { CommonPickerMethods, DatePickRef, PickerComponentClass } from './interface';
+import { Components, getTimeProps } from '.';
+import type { PickerDateProps, PickerProps, PickerTimeProps } from '.';
+import { forwardRef, useContext, useImperativeHandle } from 'react';
+import { getMergedStatus, getStatusClassNames } from '../../_util/statusUtils';
+import { getPlaceholder, transPlacement2DropdownAlign } from '../util';
+
 import CalendarOutlined from '@ant-design/icons/CalendarOutlined';
 import ClockCircleOutlined from '@ant-design/icons/ClockCircleOutlined';
 import CloseCircleFilled from '@ant-design/icons/CloseCircleFilled';
-import classNames from 'classnames';
-import RCPicker from 'rc-picker';
-import type { GenerateConfig } from 'rc-picker/lib/generate/index';
-import type { PickerMode } from 'rc-picker/lib/interface';
-import * as React from 'react';
-import { forwardRef, useContext, useImperativeHandle } from 'react';
-import type { PickerDateProps, PickerProps, PickerTimeProps } from '.';
-import { Components, getTimeProps } from '.';
 import { ConfigContext } from '../../config-provider';
 import DisabledContext from '../../config-provider/DisabledContext';
-import SizeContext from '../../config-provider/SizeContext';
 import { FormItemInputContext } from '../../form/context';
-import LocaleReceiver from '../../locale-provider/LocaleReceiver';
+import type { GenerateConfig } from 'rc-picker/lib/generate/index';
 import type { InputStatus } from '../../_util/statusUtils';
-import { getMergedStatus, getStatusClassNames } from '../../_util/statusUtils';
-import warning from '../../_util/warning';
+import LocaleReceiver from '../../locale-provider/LocaleReceiver';
+import type { PickerMode } from 'rc-picker/lib/interface';
+import RCPicker from 'rc-picker';
+import SizeContext from '../../config-provider/SizeContext';
+import classNames from 'classnames';
 import enUS from '../locale/en_US';
-import { getPlaceholder, transPlacement2DropdownAlign } from '../util';
-import type { CommonPickerMethods, DatePickRef, PickerComponentClass } from './interface';
+import warning from '../../_util/warning';
 
 export default function generatePicker<DateType>(generateConfig: GenerateConfig<DateType>) {
   type DatePickerProps = PickerProps<DateType> & {
@@ -172,7 +174,9 @@ export default function generatePicker<DateType>(generateConfig: GenerateConfig<
   const WeekPicker = getPicker<Omit<PickerDateProps<DateType>, 'picker'>>('week', 'WeekPicker');
   const MonthPicker = getPicker<Omit<PickerDateProps<DateType>, 'picker'>>('month', 'MonthPicker');
   const YearPicker = getPicker<Omit<PickerDateProps<DateType>, 'picker'>>('year', 'YearPicker');
+  //@ts-ignore
   const TimePicker = getPicker<Omit<PickerTimeProps<DateType>, 'picker'>>('time', 'TimePicker');
+  //@ts-ignore
   const QuarterPicker = getPicker<Omit<PickerTimeProps<DateType>, 'picker'>>(
     'quarter',
     'QuarterPicker',

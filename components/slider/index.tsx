@@ -209,6 +209,7 @@ const Slider = React.forwardRef<unknown, SliderSingleProps | SliderRangeProps>(
     };
 
     return (
+    // @ts-ignore
       <RcSlider
         {...(restProps as SliderRangeProps)}
         step={restProps.step!}

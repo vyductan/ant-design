@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import type {
   CSSProperties,
   FC,
@@ -9,10 +8,12 @@ import type {
   ReactNode,
 } from 'react';
 import React, { Children, forwardRef, useContext } from 'react';
-import { ConfigContext } from '../config-provider';
+
 import { Col } from '../grid';
-import { cloneElement } from '../_util/reactNode';
+import { ConfigContext } from '../config-provider';
 import { ListContext } from './index';
+import classNames from 'classnames';
+import { cloneElement } from '../_util/reactNode';
 
 export interface ListItemProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -76,6 +77,7 @@ const InternalItem: ForwardRefRenderFunction<HTMLDivElement, ListItemProps> = (
 
   const isItemContainsTextNodeAndNotSingular = () => {
     let result;
+    //@ts-ignore
     Children.forEach(children, (element: ReactElement<any>) => {
       if (typeof element === 'string') {
         result = true;

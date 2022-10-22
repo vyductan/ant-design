@@ -1,3 +1,4 @@
+// @ts-nocheck
 import addEventListener from 'rc-util/lib/Dom/addEventListener';
 
 export type BindElement = HTMLElement | Window | null | undefined;

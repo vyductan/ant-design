@@ -23,7 +23,7 @@ import warning from '../_util/warning';
 
 type RawValue = string | number;
 
-export { OptionProps, BaseSelectRef as RefSelectProps, BaseOptionType, DefaultOptionType };
+export type { OptionProps, BaseSelectRef as RefSelectProps, BaseOptionType, DefaultOptionType };
 
 export interface LabeledValue {
   key?: string;

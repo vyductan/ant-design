@@ -288,7 +288,8 @@ const ListItem = React.forwardRef(
         {itemRender
           ? itemRender(item, file, items, {
               download: onDownload.bind(null, file),
-              preview: onPreview.bind(null, file),
+//@ts-ignore
+preview: onPreview.bind(null, file),
               remove: onClose.bind(null, file),
             })
           : item}

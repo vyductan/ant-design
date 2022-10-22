@@ -51,7 +51,7 @@ import type {
 } from './interface';
 import { ColumnsType, TablePaginationConfig } from './interface';
 
-export { ColumnsType, TablePaginationConfig };
+export type { ColumnsType, TablePaginationConfig };
 
 const EMPTY_LIST: any[] = [];
 
@@ -168,6 +168,7 @@ function InternalTable<RecordType extends object = any>(
   const screens = useBreakpoint(needResponsive);
 
   const mergedColumns = React.useMemo(() => {
+    // @ts-ignore
     const matched = new Set(Object.keys(screens).filter((m: Breakpoint) => screens[m]));
 
     return baseColumns.filter(
@@ -324,6 +325,7 @@ function InternalTable<RecordType extends object = any>(
     locale: tableLocale,
     dropdownPrefixCls,
     mergedColumns,
+    // @ts-ignore
     onFilterChange,
     getPopupContainer,
   });
@@ -542,6 +544,7 @@ function InternalTable<RecordType extends object = any>(
           // Internal
           internalHooks={INTERNAL_HOOKS}
           internalRefs={internalRefs as any}
+    // @ts-ignore
           transformColumns={transformColumns as RcTableProps<RecordType>['transformColumns']}
         />
         {bottomPaginationNode}
@@ -550,6 +553,7 @@ function InternalTable<RecordType extends object = any>(
   );
 }
 
+    // @ts-ignore
 const ForwardTable = React.forwardRef(InternalTable) as <RecordType extends object = any>(
   props: React.PropsWithChildren<TableProps<RecordType>> & { ref?: React.Ref<HTMLDivElement> },
 ) => React.ReactElement;

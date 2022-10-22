@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+    // @ts-ignore
 import debounce from 'lodash/debounce';
 import omit from 'rc-util/lib/omit';
 import * as React from 'react';

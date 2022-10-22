@@ -1,5 +1,6 @@
 import FilterFilled from '@ant-design/icons/FilterFilled';
 import classNames from 'classnames';
+    // @ts-ignore
 import isEqual from 'lodash/isEqual';
 import type { FieldDataNode } from 'rc-tree';
 import * as React from 'react';
@@ -368,6 +369,7 @@ function FilterDropdown<RecordType>(props: FilterDropdownProps<RecordType>) {
                 multiple={filterMultiple}
                 checkStrictly={!filterMultiple}
                 className={`${dropdownPrefixCls}-menu`}
+    // @ts-ignore
                 onCheck={onCheck}
                 checkedKeys={selectedKeys}
                 selectedKeys={selectedKeys}

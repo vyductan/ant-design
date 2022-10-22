@@ -87,8 +87,10 @@ export default class TransferList<
     showSearch: false,
   };
 
+//@ts-ignore
   timer: number;
 
+//@ts-ignore
   triggerScrollTimer: number;
 
   defaultListBodyRef = React.createRef<DefaultListBody<RecordType>>();
@@ -196,6 +198,7 @@ export default class TransferList<
       <div className={`${prefixCls}-body-search-wrapper`}>
         <Search
           prefixCls={`${prefixCls}-search`}
+//@ts-ignore
           onChange={this.handleFilter}
           handleClear={this.handleClear}
           placeholder={searchPlaceholder}

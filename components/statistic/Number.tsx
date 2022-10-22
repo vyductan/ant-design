@@ -1,3 +1,4 @@
+    // @ts-ignore
 import padEnd from 'lodash/padEnd';
 import * as React from 'react';
 import type { FormatConfig, valueType } from './utils';

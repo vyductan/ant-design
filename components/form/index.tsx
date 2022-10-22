@@ -39,7 +39,7 @@ Form.create = () => {
   );
 };
 
-export {
+export type {
   FormInstance,
   FormProps,
   FormItemProps,

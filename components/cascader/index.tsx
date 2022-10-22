@@ -1,3 +1,4 @@
+// @ts-nocheck
 import LeftOutlined from '@ant-design/icons/LeftOutlined';
 import LoadingOutlined from '@ant-design/icons/LoadingOutlined';
 import RightOutlined from '@ant-design/icons/RightOutlined';

@@ -212,7 +212,9 @@ const InternalTreeSelect = <OptionType extends BaseOptionType | DefaultOptionTyp
       placement={getPlacement()}
       removeIcon={removeIcon}
       clearIcon={clearIcon}
+//@ts-ignore
       switcherIcon={(nodeProps: AntTreeNodeProps) =>
+//@ts-ignore
         renderSwitcherIcon(treePrefixCls, switcherIcon, treeLine, nodeProps)
       }
       showTreeIcon={treeIcon as any}

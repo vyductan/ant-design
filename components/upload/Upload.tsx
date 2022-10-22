@@ -16,7 +16,7 @@ import { file2Obj, getFileItem, removeFileItem, updateFileList } from './utils';
 
 export const LIST_IGNORE = `__LIST_IGNORE_${Date.now()}__`;
 
-export { UploadProps };
+export type { UploadProps };
 
 const InternalUpload: React.ForwardRefRenderFunction<unknown, UploadProps> = (props, ref) => {
   const {
@@ -305,6 +305,7 @@ const InternalUpload: React.ForwardRefRenderFunction<unknown, UploadProps> = (pr
 
   const prefixCls = getPrefixCls('upload', customizePrefixCls);
 
+//@ts-ignore
   const rcUploadProps = {
     onBatchStart,
     onError,

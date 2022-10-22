@@ -51,7 +51,7 @@ const Image: CompositionImage<ImageProps> = ({
   return <RcImage prefixCls={prefixCls} preview={mergedPreview} {...otherProps} />;
 };
 
-export { ImageProps };
+export type { ImageProps };
 
 Image.PreviewGroup = PreviewGroup;
 

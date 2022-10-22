@@ -14,7 +14,7 @@ import { cloneElement, isValidElement, isFragment } from '../_util/reactNode';
 import type { LiteralUnion } from '../_util/type';
 import warning from '../_util/warning';
 
-export { AdjustOverflow, PlacementsConfig };
+export type { AdjustOverflow, PlacementsConfig };
 
 export type TooltipPlacement =
   | 'top'

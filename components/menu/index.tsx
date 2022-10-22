@@ -20,9 +20,9 @@ import Item, { MenuItemProps } from './MenuItem';
 import OverrideContext from './OverrideContext';
 import SubMenu, { SubMenuProps } from './SubMenu';
 
-export { MenuItemGroupProps } from 'rc-menu';
-export { MenuDividerProps } from './MenuDivider';
-export { MenuTheme, SubMenuProps, MenuItemProps };
+export type { MenuItemGroupProps } from 'rc-menu';
+export type { MenuDividerProps } from './MenuDivider';
+export type { MenuTheme, SubMenuProps, MenuItemProps };
 
 export type MenuMode = 'vertical' | 'vertical-left' | 'vertical-right' | 'horizontal' | 'inline';
 
@@ -184,6 +184,7 @@ class Menu extends React.Component<MenuProps, {}> {
 
   static ItemGroup = ItemGroup;
 
+  //@ts-ignore
   menu: MenuRef | null;
 
   focus = (options?: FocusOptions) => {

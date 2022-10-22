@@ -1,12 +1,13 @@
-import classNames from 'classnames';
-import RcCheckbox from 'rc-checkbox';
 import * as React from 'react';
-import { useContext } from 'react';
+
 import { ConfigContext } from '../config-provider';
-import { FormItemInputContext } from '../form/context';
-import warning from '../_util/warning';
-import { GroupContext } from './Group';
 import DisabledContext from '../config-provider/DisabledContext';
+import { FormItemInputContext } from '../form/context';
+import { GroupContext } from './Group';
+import RcCheckbox from 'rc-checkbox';
+import classNames from 'classnames';
+import { useContext } from 'react';
+import warning from '../_util/warning';
 
 export interface AbstractCheckboxProps<T> {
   prefixCls?: string;
@@ -132,6 +133,7 @@ const InternalCheckbox: React.ForwardRefRenderFunction<HTMLInputElement, Checkbo
         prefixCls={prefixCls}
         className={checkboxClass}
         disabled={mergedDisabled}
+        // @ts-ignore
         ref={ref}
       />
       {children !== undefined && <span>{children}</span>}
@@ -139,7 +141,7 @@ const InternalCheckbox: React.ForwardRefRenderFunction<HTMLInputElement, Checkbo
   );
 };
 
-const Checkbox = React.forwardRef<unknown, CheckboxProps>(InternalCheckbox);
+const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(InternalCheckbox);
 if (process.env.NODE_ENV !== 'production') {
   Checkbox.displayName = 'Checkbox';
 }

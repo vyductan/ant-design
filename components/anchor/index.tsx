@@ -1,3 +1,4 @@
+// @ts-nocheck
 import InternalAnchor from './Anchor';
 import AnchorLink from './AnchorLink';
 

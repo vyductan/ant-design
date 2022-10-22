@@ -13,7 +13,7 @@ import type { Breakpoint } from '../_util/responsiveObserve';
 import { responsiveArray } from '../_util/responsiveObserve';
 import Item from './Item';
 
-export { ListItemMetaProps, ListItemProps } from './Item';
+export type { ListItemMetaProps, ListItemProps } from './Item';
 
 export type ColumnCount = number;
 

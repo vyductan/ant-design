@@ -66,6 +66,7 @@ const Timeline: TimelineType = props => {
   const truthyItems = timeLineItems.filter(item => !!item);
   const itemsCount = React.Children.count(truthyItems);
   const lastCls = `${prefixCls}-item-last`;
+//@ts-ignore
   const items = React.Children.map(truthyItems, (ele: React.ReactElement<any>, idx) => {
     const pendingClass = idx === itemsCount - 2 ? lastCls : '';
     const readyClass = idx === itemsCount - 1 ? lastCls : '';
@@ -78,6 +79,7 @@ const Timeline: TimelineType = props => {
     });
   });
 
+//@ts-ignore
   const hasLabelItem = timeLineItems.some((item: React.ReactElement<any>) => !!item?.props?.label);
 
   const classString = classNames(
@@ -94,6 +96,7 @@ const Timeline: TimelineType = props => {
 
   return (
     <ul {...restProps} className={classString}>
+{/*@ts-ignore*/}
       {items}
     </ul>
   );

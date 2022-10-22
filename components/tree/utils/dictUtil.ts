@@ -46,6 +46,7 @@ export function calcRangeKeys({
     return key === startKey || key === endKey;
   }
 
+//@ts-ignore
   traverseNodesKey(treeData, (key: Key) => {
     if (record === Record.End) {
       return false;
@@ -79,6 +80,7 @@ export function calcRangeKeys({
 export function convertDirectoryKeysToNodes(treeData: DataNode[], keys: Key[]) {
   const restKeys: Key[] = [...keys];
   const nodes: DataNode[] = [];
+//@ts-ignore
   traverseNodesKey(treeData, (key: Key, node: DataNode) => {
     const index = restKeys.indexOf(key);
     if (index !== -1) {

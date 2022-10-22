@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Breadcrumb from './Breadcrumb';
 
 export { BreadcrumbProps } from './Breadcrumb';

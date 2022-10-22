@@ -76,6 +76,7 @@ const Statistic: React.FC<StatisticProps & ConfigConsumerProps> = props => {
 
 const WrapperStatistic = withConfigConsumer<StatisticProps>({
   prefixCls: 'statistic',
+    // @ts-ignore
 })<StatisticComponent>(Statistic);
 
 export default WrapperStatistic;

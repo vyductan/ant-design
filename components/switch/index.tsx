@@ -84,6 +84,7 @@ const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
 
     return (
       <Wave insertExtraNode>
+    {/*@ts-ignore*/}
         <RcSwitch
           {...props}
           prefixCls={prefixCls}

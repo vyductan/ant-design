@@ -1,13 +1,15 @@
-import classNames from 'classnames';
-import memoizeOne from 'memoize-one';
-import addEventListener from 'rc-util/lib/Dom/addEventListener';
+// @ts-nocheck
 import * as React from 'react';
+
 import Affix from '../affix';
+import AnchorContext from './context';
 import type { ConfigConsumerProps } from '../config-provider';
 import { ConfigContext } from '../config-provider';
+import addEventListener from 'rc-util/lib/Dom/addEventListener';
+import classNames from 'classnames';
 import getScroll from '../_util/getScroll';
+import memoizeOne from 'memoize-one';
 import scrollTo from '../_util/scrollTo';
-import AnchorContext from './context';
 
 export type AnchorContainer = HTMLElement | Window;
 

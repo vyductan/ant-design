@@ -20,6 +20,7 @@ export interface MenuItemProps extends Omit<RcMenuItemProps, 'title'> {
 export default class MenuItem extends React.Component<MenuItemProps> {
   static contextType = MenuContext;
 
+  //@ts-ignore
   context: MenuContextProps;
 
   renderItemChildren(inlineCollapsed: boolean) {

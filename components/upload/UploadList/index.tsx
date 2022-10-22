@@ -58,6 +58,7 @@ const InternalUploadList: React.ForwardRefRenderFunction<unknown, UploadListProp
     if (listType !== 'picture' && listType !== 'picture-card') {
       return;
     }
+//@ts-ignore
     (items || []).forEach((file: InternalUploadFile) => {
       if (
         typeof document === 'undefined' ||

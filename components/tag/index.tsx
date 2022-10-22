@@ -11,7 +11,7 @@ import Wave from '../_util/wave';
 import warning from '../_util/warning';
 import CheckableTag from './CheckableTag';
 
-export { CheckableTagProps } from './CheckableTag';
+export type { CheckableTagProps } from './CheckableTag';
 
 export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
   prefixCls?: string;
@@ -140,6 +140,7 @@ const InternalTag: React.ForwardRefRenderFunction<HTMLSpanElement, TagProps> = (
   return isNeedWave ? <Wave>{tagNode}</Wave> : tagNode;
 };
 
+//@ts-ignore
 const Tag = React.forwardRef<unknown, TagProps>(InternalTag) as TagType;
 
 if (process.env.NODE_ENV !== 'production') {

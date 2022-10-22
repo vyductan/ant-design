@@ -12,7 +12,7 @@ import type { ModalFuncProps } from './Modal';
 import OriginModal from './Modal';
 import useModal from './useModal';
 
-export { ModalFuncProps, ModalProps } from './Modal';
+export type { ModalFuncProps, ModalProps } from './Modal';
 
 function modalWarn(props: ModalFuncProps) {
   return confirm(withWarn(props));

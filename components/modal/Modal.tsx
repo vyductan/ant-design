@@ -232,7 +232,8 @@ const Modal: React.FC<ModalProps> = props => {
         footer={footer === undefined ? defaultFooter : footer}
         visible={open || visible}
         mousePosition={mousePosition}
-        onClose={handleCancel}
+  //@ts-ignore
+  onClose={handleCancel}
         closeIcon={closeIconToRender}
         focusTriggerAfterClose={focusTriggerAfterClose}
         transitionName={getTransitionName(rootPrefixCls, 'zoom', props.transitionName)}

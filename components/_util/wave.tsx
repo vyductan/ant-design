@@ -1,11 +1,14 @@
-import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
-import { composeRef, supportRef } from 'rc-util/lib/ref';
+// @ts-nocheck
 import * as React from 'react';
-import { forwardRef } from 'react';
-import type { ConfigConsumerProps, CSPConfig } from '../config-provider';
+
+import type { CSPConfig, ConfigConsumerProps } from '../config-provider';
 import { ConfigConsumer, ConfigContext } from '../config-provider';
-import raf from './raf';
+import { composeRef, supportRef } from 'rc-util/lib/ref';
+
 import { cloneElement } from './reactNode';
+import { forwardRef } from 'react';
+import raf from './raf';
+import { updateCSS } from 'rc-util/lib/Dom/dynamicCSS';
 
 let styleForPseudo: HTMLStyleElement | null;
 
@@ -51,7 +54,7 @@ class InternalWave extends React.Component<WaveProps> {
 
   private containerRef = React.createRef<HTMLDivElement>();
 
-  private extraNode: HTMLDivElement;
+  private extraNode: HTMLDivElement = document.createElement('div');
 
   private clickWaveTimeoutId: number;
 

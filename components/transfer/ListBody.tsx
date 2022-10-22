@@ -155,7 +155,9 @@ class ListBody<RecordType extends KeyWiseTransferItem> extends React.Component<
                 renderedEl={renderedEl}
                 checked={checked}
                 prefixCls={prefixCls}
-                onClick={this.onItemSelect}
+//@ts-ignore
+onClick={this.onItemSelect}
+//@ts-ignore
                 onRemove={this.onItemRemove}
                 showRemove={showRemove}
               />

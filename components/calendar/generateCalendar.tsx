@@ -1,3 +1,4 @@
+// @ts-nocheck
 import classNames from 'classnames';
 import padStart from 'lodash/padStart';
 import { PickerPanel as RCPickerPanel } from 'rc-picker';

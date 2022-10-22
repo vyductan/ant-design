@@ -4,7 +4,7 @@ import type { RadioProps } from './interface';
 import InternalRadio from './radio';
 import Button from './radioButton';
 
-export {
+export type {
   RadioChangeEvent,
   RadioChangeEventTarget,
   RadioGroupButtonStyle,

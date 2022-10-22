@@ -27,8 +27,10 @@ const Rate = React.forwardRef<unknown, RateProps>((props, ref) => {
 
   return (
     <RcRate
+    // @ts-ignore
       ref={ref}
       character={character}
+    // @ts-ignore
       characterRender={characterRender}
       {...rest}
       prefixCls={ratePrefixCls}

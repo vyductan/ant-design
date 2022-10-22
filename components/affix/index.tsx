@@ -1,10 +1,5 @@
-import classNames from 'classnames';
-import ResizeObserver from 'rc-resize-observer';
-import omit from 'rc-util/lib/omit';
+// @ts-nocheck
 import * as React from 'react';
-import type { ConfigConsumerProps } from '../config-provider';
-import { ConfigContext } from '../config-provider';
-import { throttleByAnimationFrameDecorator } from '../_util/throttleByAnimationFrame';
 
 import {
   addObserveTarget,
@@ -13,6 +8,13 @@ import {
   getTargetRect,
   removeObserveTarget,
 } from './utils';
+
+import type { ConfigConsumerProps } from '../config-provider';
+import { ConfigContext } from '../config-provider';
+import ResizeObserver from 'rc-resize-observer';
+import classNames from 'classnames';
+import omit from 'rc-util/lib/omit';
+import { throttleByAnimationFrameDecorator } from '../_util/throttleByAnimationFrame';
 
 function getDefaultTarget() {
   return typeof window !== 'undefined' ? window : null;

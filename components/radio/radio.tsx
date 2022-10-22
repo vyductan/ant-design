@@ -71,12 +71,14 @@ const InternalRadio: React.ForwardRefRenderFunction<HTMLElement, RadioProps> = (
       onMouseEnter={props.onMouseEnter}
       onMouseLeave={props.onMouseLeave}
     >
+      {/*@ts-ignore*/}
       <RcCheckbox {...radioProps} type="radio" prefixCls={prefixCls} ref={mergedRef} />
       {children !== undefined ? <span>{children}</span> : null}
     </label>
   );
 };
 
+  //@ts-ignore
 const Radio = React.forwardRef<unknown, RadioProps>(InternalRadio);
 
 if (process.env.NODE_ENV !== 'production') {

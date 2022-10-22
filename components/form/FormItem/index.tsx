@@ -215,6 +215,7 @@ function InternalFormItem<Values = any>(props: FormItemProps<Values>): React.Rea
         errors={mergedErrors}
         warnings={mergedWarnings}
         meta={meta}
+        //@ts-ignore
         onSubItemMetaChange={onSubItemMetaChange}
       >
         {baseChildren}
@@ -313,9 +314,11 @@ function InternalFormItem<Values = any>(props: FormItemProps<Values>): React.Rea
           if (props.help || mergedErrors.length > 0 || mergedWarnings.length > 0 || props.extra) {
             const describedbyArr = [];
             if (props.help || mergedErrors.length > 0) {
+  //@ts-ignore
               describedbyArr.push(`${fieldId}_help`);
             }
             if (props.extra) {
+  //@ts-ignore
               describedbyArr.push(`${fieldId}_extra`);
             }
             childProps['aria-describedby'] = describedbyArr.join(' ');

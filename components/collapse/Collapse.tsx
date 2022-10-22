@@ -1,17 +1,17 @@
-import RightOutlined from '@ant-design/icons/RightOutlined';
-import classNames from 'classnames';
-import RcCollapse from 'rc-collapse';
-import type { CSSMotionProps } from 'rc-motion';
 import * as React from 'react';
 
-import toArray from 'rc-util/lib/Children/toArray';
-import omit from 'rc-util/lib/omit';
-import { ConfigContext } from '../config-provider';
-import collapseMotion from '../_util/motion';
-import { cloneElement } from '../_util/reactNode';
-import warning from '../_util/warning';
-import type { CollapsibleType } from './CollapsePanel';
+import type { CSSMotionProps } from 'rc-motion';
 import CollapsePanel from './CollapsePanel';
+import type { CollapsibleType } from './CollapsePanel';
+import { ConfigContext } from '../config-provider';
+import RcCollapse from 'rc-collapse';
+import RightOutlined from '@ant-design/icons/RightOutlined';
+import classNames from 'classnames';
+import { cloneElement } from '../_util/reactNode';
+import collapseMotion from '../_util/motion';
+import omit from 'rc-util/lib/omit';
+import toArray from 'rc-util/lib/Children/toArray';
+import warning from '../_util/warning';
 
 /** @deprecated Please use `start` | `end` instead */
 type ExpandIconPositionLegacy = 'left' | 'right';
@@ -23,7 +23,7 @@ export interface CollapseProps {
   /** 手风琴效果 */
   accordion?: boolean;
   destroyInactivePanel?: boolean;
-  onChange?: (key: string | string[]) => void;
+  onChange?: (key: React.Key | React.Key[]) => void; // vdt
   style?: React.CSSProperties;
   className?: string;
   bordered?: boolean;
